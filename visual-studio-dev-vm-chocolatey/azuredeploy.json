@@ -220,7 +220,7 @@
         "resources": [
           {
             "name": "SetupChocolatey",
-            "type": "extensions",
+            "type": "Microsoft.Compute/virtualMachines/extensions",
             "location": "[resourceGroup().location]",
             "apiVersion": "2015-06-15",
             "dependsOn": [
@@ -230,7 +230,7 @@
               "displayName": "SetupChocolatey"
             },
             "properties": {
-              "publisher": "Microsoft.Azure.Extensions",
+              "publisher": "Microsoft.Compute",
               "type": "CustomScriptExtension",
               "typeHandlerVersion": "1.9",
               "autoUpgradeMinorVersion": true,
