@@ -15,12 +15,14 @@
     },
     "vmName": {
       "type": "string",
+      "defaultValue": "andrewmo-choco",
       "metadata": {
         "description": "Local name for the VM can be whatever you want"
       }
     },
     "vmAdminUserName": {
       "type": "string",
+      "defaultValue": "andrewmo",
       "metadata": {
         "description": "VM admin user name"
       }
@@ -40,7 +42,7 @@
     },
     "vmVisualStudioVersion": {
       "type": "string",
-      "defaultValue": "VS-2015-Comm-AzureSDK-2.9-W10T-Win10-N",
+      "defaultValue": "VS-2017-Ent-Latest-Win10-N",
       "allowedValues": [
         "VS-2015-Comm-VSU3-AzureSDK-29-Win10-N",
         "VS-2015-Comm-VSU3-AzureSDK-29-WS2012R2",
@@ -62,11 +64,13 @@
     "dnsLabelPrefix": {
       "type": "string",
       "metadata": {
+      "defaultValue": "andrewmo-choco",
       "description": "DNS Label for the Public IP. Must be lowercase. It should match with the following regular expression: ^[a-z][a-z0-9-]{1,61}[a-z0-9]$ or it will raise an error."
       }
     },
     "chocoPackages": {
       "type": "string",
+      "defaultValue": "notepadplusplus;googlechrome;visualstudiocode",
       "metadata": {
         "description": "List of Chocolatey packages to install separated by a semi-colon eg. linqpad;sysinternals"
       }
@@ -80,7 +84,7 @@
     },
     "setupChocolatelyScriptLocation": {
       "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/visual-studio-dev-vm-chocolatey/scripts/",
+      "defaultValue": "https://github.com/snagrom/azure-quickstart-templates/tree/master/visual-studio-dev-vm-chocolatey/scripts/",
       "metadata": {
         "description": "Public uri location of PowerShell Chocolately setup script"
       }
@@ -228,7 +232,7 @@
             "properties": {
               "publisher": "Microsoft.Azure.Extensions",
               "type": "CustomScriptExtension",
-              "typeHandlerVersion": "2.0",
+              "typeHandlerVersion": "1.9",
               "autoUpgradeMinorVersion": true,
               "settings": {
                 "fileUris": [
